@@ -5,18 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyPalComponent } from './my-pal/my-pal.component';
 import { GeometryComponent } from './geometry/geometry.component';
-import { SquareBaseComponent } from './square-base/square-base.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MyPalComponent,
-    GeometryComponent,
-    SquareBaseComponent
+    GeometryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

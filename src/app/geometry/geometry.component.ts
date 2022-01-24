@@ -6,18 +6,34 @@ import { SquareBase } from '../square-base';
   templateUrl: './geometry.component.html',
   styleUrls: ['./geometry.component.css'],
 })
-export class GeometryComponent extends SquareBase implements OnInit {
+export class GeometryComponent extends SquareBase {
   length: number = 0;
+  width: number = 0;
   height: number = 0;
+  area: number = 0;
+  perimeter: number = 0;
 
-  public CalculateArea(length,height): number {
+  public CalculateArea(l: number, w: number): number {
+    let area: number;
+    if (this.height === 0) {
+      area = l * w;
+    } else {
+      area = 0.5 * this.height * (l + w);
+    }
 
-
-    const area = 0;
     return area;
   }
 
-  constructor() {}
+  public CalculateCircumference(l: number, w: number): number {
+    const perimeter: number = l * 2 + w * 2;
+    return perimeter;
+  }
 
-  ngOnInit(): void {}
+  OnCalcArea() {
+    this.area = this.CalculateArea(this.length, this.width);
+  }
+
+  OnCalcPerimeter() {
+    this.perimeter = this.CalculateCircumference(this.length, this.width);
+  }
 }
