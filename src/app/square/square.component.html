@@ -1,0 +1,16 @@
+<div class="row">
+  <h5>Square</h5>
+  <div class="input-group">
+    <input type="number" class="form-control" placeholder="indtast længde" [(ngModel)]="_length" id="length">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateArea(_length,_length)">Areal</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateCircumference(_length,_length)">Omkreds</button>
+    </div>
+  </div>
+
+  <label>calculated area: {{area}}</label>
+  <label>calculated perimeter: {{perimeter}}</label>
+</div>
+
+
+

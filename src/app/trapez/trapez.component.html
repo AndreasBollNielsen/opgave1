@@ -1,0 +1,23 @@
+<div class="row">
+
+  <h5>Trapez</h5>
+
+  <!-- <img src="https://www.lommeregner.net/images/arealet-af-en-trapez.png"  width="50"> -->
+  <div class="input-group">
+    <input type="number" class="form-control" placeholder="indtast længde a" [(ngModel)]="_length_a" id="length">
+    <input type="number" class="form-control" placeholder="indtast længde b" [(ngModel)]="_length_b" id="length">
+    <input type="number" class="form-control" placeholder="indtast bredde a" name="width" [(ngModel)]="_width_a" id="width">
+    <input type="number" class="form-control" placeholder="indtast bredde b" name="height" [(ngModel)]="_width_b" id="height">
+    <input type="number" class="form-control" placeholder="indtast vinkel b" name="height" [(ngModel)]="_angle_b" id="height">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateArea(_length_a,_width_a)">Areal</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateCircumference(_length_a,_width_b,_length_b,_width_b)">Omkreds</button>
+    </div>
+  </div>
+
+  <label>calculated area: {{area}}</label>
+  <label>calculated perimeter: {{perimeter}}</label>
+</div>
+
+
+

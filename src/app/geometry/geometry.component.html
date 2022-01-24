@@ -4,45 +4,15 @@
   </div>
 </div>
 
-<div class="row">
+<!--calc square-->
+<app-square></app-square>
 
-  <h5>Rectangel</h5>
-  <div class="input-group">
-    <input type="number" class="form-control" placeholder="indtast længde" [(ngModel)]="length" id="length">
-    <input type="number" class="form-control" placeholder="indtast bredde" name="width" [(ngModel)]="width" id="width">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" (click)="OnCalcArea()">Areal</button>
-      <button class="btn btn-outline-secondary" type="button" (click)="OnCalcPerimeter()">Omkreds</button>
-    </div>
-  </div>
+<!--calc rectangle-->
+<app-rectangle></app-rectangle>
 
-</div>
+<!--calc parallelogram-->
+<app-parallelogram></app-parallelogram>
 
-<!--Trapez-->
-<div class="row">
+<!--calc trapez-->
+<app-trapez></app-trapez>
 
-  <h5>Trapez</h5>
-  <div class="input-group">
-    <input type="number" class="form-control" placeholder="indtast længde" [(ngModel)]="length" id="length">
-    <input type="number" class="form-control" placeholder="indtast bredde" name="width" [(ngModel)]="width" id="width">
-    <input type="number" class="form-control" placeholder="indtast højde" name="height" [(ngModel)]="height" id="height">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" (click)="OnCalcArea()">Areal</button>
-      <button class="btn btn-outline-secondary" type="button" (click)="OnCalcPerimeter()">Omkreds</button>
-    </div>
-  </div>
-
-</div>
-
-
-
-<div class="row">
-  <div class="col">
-    <label>calculated area: {{area}}</label>
-
-  </div>
-  <div class="col">
-    <label>calculated perimeter: {{perimeter}}</label>
-
-  </div>
-</div>

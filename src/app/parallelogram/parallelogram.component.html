@@ -1,0 +1,19 @@
+<div class="row">
+
+  <h5>Parallelogram</h5>
+  <div class="input-group">
+    <input type="number" class="form-control" placeholder="indtast længde" [(ngModel)]="_length" id="length">
+    <input type="number" class="form-control" placeholder="indtast bredde" name="width" [(ngModel)]="_width" id="width">
+    <input type="number" class="form-control" placeholder="indtast højde" name="height" [(ngModel)]="_height" id="height">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateArea(_length,_width)">Areal</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="CalculateCircumference(_length,_width)">Omkreds</button>
+    </div>
+  </div>
+
+  <label>calculated area: {{area}}</label>
+  <label>calculated perimeter: {{perimeter}}</label>
+</div>
+
+
+
